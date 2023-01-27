@@ -3,7 +3,7 @@ import { Link, Outlet } from "react-router-dom";
 import "../App.css";
 
 const Root = () => {
-  const [nav, setNav] = useState(false);
+  const [nav, setNav] = useState(true);
 
   return (
     <>
@@ -33,7 +33,7 @@ const Root = () => {
         <div>
           <button className="btn">Request invite</button>
         </div>
-        {!nav ? (
+        {nav ? (
           <div className="burger" onClick={() => setNav(!nav)}>
             <img src="/images/icon-hamburger.svg" alt="Menu button" />
           </div>
